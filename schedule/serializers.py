@@ -1,9 +1,8 @@
 from rest_framework import serializers
-
 from station.models import StationModel
 from train.models import TrainModel
 from .models import ScheduleModel
-from train.serializers import TrainSerializers
+from train.serializers import TrainOutputSerializer
 from station.serializers import StationSerializer
 
 
