@@ -11,4 +11,4 @@ class TrainModel(models.Model):
     destination_station = models.ForeignKey(StationModel, on_delete=models.CASCADE, related_name='origin-destination+')
 
     def __str__(self):
-        return f"{self.origin_station} to {self.destination_station}"
+        return f"{self.origin_station.name} to {self.destination_station.name}"

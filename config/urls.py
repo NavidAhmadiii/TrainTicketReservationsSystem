@@ -23,4 +23,5 @@ urlpatterns = [
     path('train/', include('train.urls')),
     path('station/', include('station.urls')),
     path('seat/', include('seat.urls')),
+    path('schedule/', include('schedule.urls')),
 ]
