@@ -3,7 +3,6 @@ from .models import Seat
 
 
 class SeatSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = Seat
         fields = ('id', 'seat_number', 'seat_class')
@@ -14,4 +13,4 @@ class SeatDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Seat
-        fields = ('id', 'seat_number', 'seat_class', 'is_reserved')
+        fields = ('id', 'seat_number', 'seat_class', 'is_reserved', 'price')
