@@ -29,6 +29,17 @@ class ReservationAPIView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+class ReservationDeleteAPIView(APIView):
+
+    def delete(self, request, pk):
+        try:
+            reservation = ReservationModel.objects.get(pk=pk)
+            reservation.delete()
+            return Response({'message': 'Reservation deleted successfully'}, status=status.HTTP_204_NO_CONTENT)
+        except ReservationModel.DoesNotExist:
+            return Response({'message': 'Reservation not found'}, status=status.HTTP_404_NOT_FOUND)
+
+
 if settings.SANDBOX:
     sandbox = 'sandbox'
 else:
