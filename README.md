@@ -61,10 +61,11 @@ The application should now be accessible. You can visit `http://localhost:8000` 
 If you would like to contribute to improving and expanding this application, please send your feedback or submit a pull request.
 
 ## License
-This application is released under the MIT License. For more information, please see the [LICENSE](LICENSE) file.
+This project is licensed under the terms of the [MIT license](LICENSE).
 
 ## Admin Panel
 You can access the admin panel using the following credentials:
-
+- Username: admin
+- Password: admin
 
 
