@@ -12,7 +12,6 @@ class Seat(models.Model):
     ]
     seat_class = models.CharField(max_length=20, choices=SEAT_CLASS_CHOICES)
     is_reserved = models.BooleanField(default=False)  # False for available, True for reserved
-    price = models.DecimalField(max_digits=10, decimal_places=2)
 
     def __str__(self):
         return f" Seat number: {self.seat_number}"

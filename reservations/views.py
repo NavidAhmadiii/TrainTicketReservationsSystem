@@ -21,11 +21,11 @@ class ReservationAPIView(APIView):
     def post(self, request):
         serializer = ReservationInputSerializer(data=request.data)
         if serializer.is_valid():
+            number_of_tickets = serializer.validated_data.get('number_of_tickets')
+            amount_per_ticket = 1000
+            total_amount = amount_per_ticket * number_of_tickets
             serializer.save()
-            # برای دریافت اطلاعات جدید از دیتابیس
-            new_reservation = ReservationModel.objects.latest('id')
-            output_serializer = ReservationOutputSerializer(new_reservation)
-            return Response(output_serializer.data, status=status.HTTP_201_CREATED)
+            return Response({'status': True, 'total_amount': total_amount}, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 

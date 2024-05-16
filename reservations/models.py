@@ -18,3 +18,4 @@ class ReservationModel(models.Model):
     schedule = models.ForeignKey(ScheduleModel, on_delete=models.CASCADE)
     seat = models.ForeignKey(Seat, on_delete=models.CASCADE)
     status = models.CharField(choices=STATUS_CHOICES, default='pending')
+    number_of_ticket = models.IntegerField(default=1)
