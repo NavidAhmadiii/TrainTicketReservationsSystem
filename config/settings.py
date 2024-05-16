@@ -155,3 +155,6 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=10),
     'ROTATE_REFRESH_TOKENS': True,
 }
+
+SANDBOX = True
+MERCHANT = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
