@@ -1,6 +1,6 @@
 # Train Ticket Reservation Management System
 
-This application is a train ticket reservation management system created using Django. With this application, administrators can manage, reserve, and cancel train tickets, and users can reserve their tickets.
+This application is a train ticket reservation management system created using Django and Django Rest Framework. With this application, administrators can manage, reserve, and cancel train tickets, and users can reserve their tickets.
 
 ## Features
 
