@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      DJANGO_SETTINGS_MODULE: TrainReservationsSystem.settings
+      DATABASE_URL: postgresql://postgres:navid0832@db:5432/TrainReservationSystem
+    depends_on:
+      - db
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_PASSWORD: navid0832
+      POSTGRES_DB: TrainReservationSystem
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:

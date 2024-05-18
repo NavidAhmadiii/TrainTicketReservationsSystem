@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 from datetime import timedelta
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -81,6 +82,17 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+#
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'TrainReservationSystem',
+#         'USER': 'postgres',
+#         'PASSWORD': 'navid0832',
+#         'HOST': 'localhost',
+#         'PORT': '5432'
+#     }
+# }
 
 DATABASES = {
     'default': {
@@ -88,8 +100,8 @@ DATABASES = {
         'NAME': 'TrainReservationSystem',
         'USER': 'postgres',
         'PASSWORD': 'navid0832',
-        'HOST': 'localhost',
-        'PORT': '5432'
+        'HOST': 'host.docker.internal',
+        'PORT': '5432',
     }
 }
 
